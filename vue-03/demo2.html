@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .active {
+        color: red;
+    }
+</style>
+<body>
+<div id="app">
+    <h1 class="title" :class="{active:aaa,line:bbb }">{{message}}</h1>
+    <button @click="active">请点击</button>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    //let变量,const常量
+    let app = new Vue({
+        el: '#app',
+        data: {
+            message:'你好',
+            aaa: true,
+            bbb: true
+        },
+        methods: {
+            active() {
+                this.aaa = !this.aaa
+            }
+        }
+    });
+</script>
+</body>
+</html>

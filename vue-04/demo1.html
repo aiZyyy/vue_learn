@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <h1>{{message}}</h1>
+    <h2>{{test}}</h2>
+    <h3>{{getAll()}}</h3>
+    <h4>{{fullName}}</h4>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    //let变量,const常量
+    let app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Vue Demo',
+            test: 'test'
+        },
+        methods: {
+            getAll() {
+                return this.message + '' + this.test
+            }
+        },
+        computed: {
+            fullName() {
+                return this.message + '' + this.test
+            }
+        }
+    });
+</script>
+</body>
+</html>

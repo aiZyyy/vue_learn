@@ -6,20 +6,18 @@
 </head>
 <body>
 <div id="app">
-    <h1>{{message+test}}</h1>
-    <h2>{{test}} {{message}}</h2>
-    <h3>{{content+3}}</h3>
+    <h1>{{message}}</h1>
+    <img :src="message">
+    <a :href="test">1111</a>
 </div>
-
 <script src="../js/vue.js"></script>
 <script>
     //let变量,const常量
     let app = new Vue({
         el: '#app',
         data: {
-            message: 'Vue Demo',
-            test: 'test',
-            content: 0
+            message: 'https://www.baidu.com/img/pc_cc75653cd975aea6d4ba1f59b3697455.png',
+            test: 'http://www.baidu.com'
         }
     });
 </script>
