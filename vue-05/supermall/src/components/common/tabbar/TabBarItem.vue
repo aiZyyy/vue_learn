@@ -19,6 +19,10 @@ export default {
     link: {
       type: String,
       required: true
+    },
+    activeColor: {
+      type: String,
+      default: "red"
     }
   },
   computed: {
@@ -26,18 +30,18 @@ export default {
       return this.$route.path.indexOf(this.link) !== -1;
     },
     activeStyle() {
-      return this.isActive ? { color: "red" } : {};
+      return this.isActive ? { color: this.activeColor } : {};
     }
   },
   methods: {
     itemClick() {
-      this.$router.replace(this.link);
+      this.$router.push(this.link);
     }
   }
 };
 </script>
 
-<style scoped>
+<style>
 #tab-bar-item {
   flex: 1;
 }

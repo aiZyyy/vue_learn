@@ -1,6 +1,6 @@
 <template>
   <tab-bar>
-    <tab-bar-item link="/home">
+    <tab-bar-item link="/home" activeColor="blue">
       <img slot="icon" src="@/assets/img/tabbar/home.svg" alt />
       <img slot="active-icon" src="@/assets/img/tabbar/home_active.svg" alt />
       <div slot="text">首页</div>
@@ -36,5 +36,5 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 </style>
